@@ -7,15 +7,15 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  background: #f0f4f8;
+  font-family: 'Roboto Slab', serif;
+  color: #f5f5f5;
+  background: #121212;
   position: relative;
   min-height: 100vh;
 }
 
 header {
-  background: white;
+  background: #1e1e1e;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,7 +40,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #333;
+  color: #f5f5f5;
   font-size: 1rem;
   transition: color 0.3s;
 }
@@ -52,12 +52,13 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 100px 20px;
-  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+  background: linear-gradient(to bottom, #0284c7, #121212);
 }
 
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  color: #fff;
 }
 
 .hero h1 span {
@@ -66,7 +67,7 @@ nav a:hover {
 
 .hero p {
   font-size: 1.2rem;
-  color: #555;
+  color: #ccc;
 }
 
 .section {
@@ -77,12 +78,13 @@ nav a:hover {
 .section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  color: #0284c7;
 }
 
 .section p {
   max-width: 600px;
   margin: 0 auto 40px;
-  color: #666;
+  color: #ccc;
 }
 
 .project-cards {
@@ -94,21 +96,28 @@ nav a:hover {
 }
 
 .card {
-  background: white;
+  background: #1e1e1e;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.3s;
+  color: #f5f5f5;
 }
 
 .card:hover {
   transform: translateY(-10px);
 }
 
+.card a {
+  text-decoration: none;
+  color: #0284c7;
+  font-weight: bold;
+}
+
 footer {
   text-align: center;
   padding: 20px;
-  background: #ffffff;
+  background: #1e1e1e;
   font-size: 0.9rem;
   color: #777;
   margin-top: 40px;
@@ -116,33 +125,31 @@ footer {
 
 /* About Me Section */
 .about-section {
-  background: #f9fafb; /* Light background for contrast */
+  background: #1e1e1e;
   padding: 80px 20px;
-  margin-top: 40px;
+  color: #fff;
 }
 
 .about-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.about-text {
-  flex: 1;
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.6;
   text-align: left;
 }
 
+.about-text {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
 .about-image {
-  flex: 0 0 200px;
+  margin-top: 40px;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
 }
 
 .about-image img {
@@ -158,70 +165,22 @@ footer {
   width: 100%;
   height: 100%;
   z-index: -1;
-  overflow: hidden;
-  top: 0;
-  left: 0;
 }
 
 .bubble {
   position: absolute;
-  bottom: -100px;
-  width: 40px;
-  height: 40px;
-  background: rgba(14, 165, 233, 0.3);
   border-radius: 50%;
-  animation: rise 25s infinite ease-in;
+  background-color: rgba(255, 255, 255, 0.1);
+  animation: bubble 10s infinite;
 }
 
-.bubble:nth-child(1) { left: 10%; animation-duration: 20s; animation-delay: 3s; }
-.bubble:nth-child(2) { left: 30%; animation-duration: 22s; animation-delay: 1s; }
-.bubble:nth-child(3) { left: 50%; animation-duration: 25s; animation-delay: 5s; }
-.bubble:nth-child(4) { left: 70%; animation-duration: 18s; animation-delay: 7s; }
-.bubble:nth-child(5) { left: 90%; animation-duration: 28s; animation-delay: 2s; }
-
-@keyframes rise {
-  0% { transform: translateY(0) scale(1); opacity: 0.4; }
-  50% { opacity: 0.7; }
-  100% { transform: translateY(-1200px) scale(1.5); opacity: 0; }
-}
-
-/* Scroll to Top Button */
-#scrollToTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #0284c7;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  padding: 15px;
-  font-size: 20px;
-  cursor: pointer;
-  display: none;
-}
-
-#scrollToTopBtn:hover {
-  background-color: #0369a1;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
+@keyframes bubble {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 1;
   }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .about-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-text {
-    margin-bottom: 20px;
+  100% {
+    transform: translateY(-100vh) scale(1);
+    opacity: 0;
   }
 }

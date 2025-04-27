@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Himanshu Paradkar - GitHub Profile</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
   <!-- Header -->
   <header>
-    <div class="logo">Himanshu Paradkar</div>
+    <div class="logo">
+      Himanshu Paradkar
+    </div>
     <nav>
       <ul>
-        <li><a href="#about" class="active">About</a></li>
+        <li><a href="#about">About Me</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -23,17 +25,20 @@
   <!-- Hero Section -->
   <section class="hero">
     <h1>Hi, I'm <span>Himanshu Paradkar</span></h1>
-    <p>Welcome to my professional GitHub profile! I am a software engineer, passionate about web development, cloud computing, and more.</p>
+    <p>Welcome to my GitHub Profile. I'm a software engineer passionate about web development and cloud technologies.</p>
   </section>
 
   <!-- About Me Section -->
-  <section id="about" class="section">
+  <section id="about" class="section about-section">
     <h2>About Me</h2>
     <div class="about-content">
       <div class="about-text">
         <p>I'm a third-year computer science student with a focus on web development, cloud technologies, and containerization. I love solving problems and creating efficient, scalable systems. I am passionate about working on open-source projects and constantly improving my skills in new technologies.</p>
+        <p>I specialize in creating cloud-native applications, deploying them with modern technologies like Docker and Kubernetes, and optimizing system performance using various tools. My goal is to make a meaningful impact in the tech industry.</p>
       </div>
-      <img src="profile.jpg" alt="Himanshu Paradkar" class="about-image">
+      <div class="about-image">
+        <img src="profile.jpg" alt="Himanshu Paradkar">
+      </div>
     </div>
   </section>
 
@@ -41,71 +46,33 @@
   <section id="projects" class="section">
     <h2>Projects</h2>
     <div class="project-cards">
-      <div class="card">
-        <img src="project1.jpg" alt="Project 1">
-        <div class="card-content">
-          <h3>Project 1: E-commerce Web Application</h3>
-          <p>A web application built with React and Node.js to manage e-commerce transactions. It features user authentication, product management, and order processing.</p>
-          <button class="btn"><a href="https://github.com/Himanshu-1800/ecommerce-project" target="_blank" style="color:white;">View Project</a></button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="project2.jpg" alt="Project 2">
-        <div class="card-content">
-          <h3>Project 2: Cloud-Based Student Records</h3>
-          <p>Cloud-based student records system deployed on AWS using EC2, RDS, and Auto Scaling. It ensures high availability and scalability for a growing user base.</p>
-          <button class="btn"><a href="https://github.com/Himanshu-1800/student-records-system" target="_blank" style="color:white;">View Project</a></button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Feel free to reach out to me via email or connect on LinkedIn!</p>
-    <div class="contact-icons">
-      <a href="https://github.com/Himanshu-1800" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/himanshu-paradkar" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.docker.com/" target="_blank"><i class="fab fa-docker"></i></a>
-      <a href="https://aws.amazon.com/" target="_blank"><i class="fab fa-aws"></i></a>
-      <a href="https://reactjs.org/" target="_blank"><i class="fab fa-react"></i></a>
-      <a href="https://www.python.org/" target="_blank"><i class="fab fa-python"></i></a>
+      <!-- Add your project cards here -->
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>Contact: himanshu.paradkar@example.com | &copy; 2025 Himanshu Paradkar</p>
+    <p>© 2025 Himanshu Paradkar</p>
   </footer>
 
   <!-- Scroll to Top Button -->
-  <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
-
-  <!-- Floating Bubbles Animation -->
-  <div class="bubbles">
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-  </div>
+  <button id="scrollToTopBtn">&#8593;</button>
 
   <script>
-    // Show or hide scroll to top button based on scroll position
+    // Scroll to Top Button
     window.onscroll = function() {
-      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        scrollToTopBtn.style.display = "block";
+      const btn = document.getElementById('scrollToTopBtn');
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btn.style.display = 'block';
       } else {
-        scrollToTopBtn.style.display = "none";
+        btn.style.display = 'none';
       }
     };
-
-    function scrollToTop() {
+    document.getElementById('scrollToTopBtn').onclick = function() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
-    }
+    };
   </script>
+
 </body>
 </html>

@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Himanshu Paradkar's GitHub Webpage</title>
+  <title>Himanshu Paradkar - GitHub Profile</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
   <!-- Header -->
   <header>
-    <div class="logo">
-      Himanshu Paradkar
-    </div>
+    <div class="logo">Himanshu Paradkar</div>
     <nav>
       <ul>
-        <li><a href="#about">About</a></li>
+        <li><a href="#about" class="active">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -23,55 +22,63 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Welcome to My Portfolio <span>Webpage</span></h1>
-    <p>Explore my projects, skills, and more!</p>
+    <h1>Hi, I'm <span>Himanshu Paradkar</span></h1>
+    <p>Welcome to my professional GitHub profile! I am a software engineer, passionate about web development, cloud computing, and more.</p>
   </section>
 
-  <!-- About Section -->
-  <section class="section" id="about">
+  <!-- About Me Section -->
+  <section id="about" class="section">
     <h2>About Me</h2>
-    <p>Hi, I'm Himanshu Paradkar, a passionate software developer and technology enthusiast. I specialize in cloud computing, containerization, and web development.</p>
+    <div class="about-content">
+      <div class="about-text">
+        <p>I'm a third-year computer science student with a focus on web development, cloud technologies, and containerization. I love solving problems and creating efficient, scalable systems.</p>
+      </div>
+      <img src="profile.jpg" alt="Himanshu Paradkar" class="about-image">
+    </div>
   </section>
 
   <!-- Projects Section -->
-  <section class="section" id="projects">
-    <h2>My Projects</h2>
-    <p>Here are some of my awesome projects that I have worked on:</p>
+  <section id="projects" class="section">
+    <h2>Projects</h2>
     <div class="project-cards">
       <div class="card">
-        <h3>Project 1</h3>
-        <p>Description of the project goes here.</p>
+        <img src="project1.jpg" alt="Project 1">
+        <div class="card-content">
+          <h3>Project 1</h3>
+          <p>A web application built with React and Node.js to manage e-commerce transactions.</p>
+          <button class="btn">View Project</button>
+        </div>
       </div>
       <div class="card">
-        <h3>Project 2</h3>
-        <p>Description of the project goes here.</p>
-      </div>
-      <div class="card">
-        <h3>Project 3</h3>
-        <p>Description of the project goes here.</p>
+        <img src="project2.jpg" alt="Project 2">
+        <div class="card-content">
+          <h3>Project 2</h3>
+          <p>Cloud-based student records system deployed on AWS using EC2, RDS, and Auto Scaling.</p>
+          <button class="btn">View Project</button>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="section" id="contact">
-    <h2>Contact Me</h2>
-    <p>If you'd like to connect, feel free to reach out!</p>
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Feel free to reach out to me via email or connect on LinkedIn!</p>
     <div class="contact-icons">
-      <a href="https://github.com/Himanshu-1800" target="_blank"><img src="github-logo.png" alt="GitHub"></a>
-      <a href="https://www.linkedin.com/in/himanshu-paradkar" target="_blank"><img src="linkedin-logo.png" alt="LinkedIn"></a>
+      <a href="https://github.com/Himanshu-1800" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/himanshu-paradkar" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
 
-  <!-- Scroll to Top Button -->
-  <button id="scrollToTopBtn">↑</button>
-
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Himanshu Paradkar. All rights reserved.</p>
+    <p>Contact: himanshu.paradkar@example.com | &copy; 2025 Himanshu Paradkar</p>
   </footer>
 
-  <!-- Bubbles Animation -->
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
+  <!-- Floating Bubbles Animation -->
   <div class="bubbles">
     <div class="bubble"></div>
     <div class="bubble"></div>
@@ -81,10 +88,9 @@
   </div>
 
   <script>
-    // Scroll to top button functionality
-    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-    window.onscroll = () => {
+    // Show or hide scroll to top button based on scroll position
+    window.onscroll = function() {
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         scrollToTopBtn.style.display = "block";
       } else {
@@ -92,9 +98,10 @@
       }
     };
 
-    scrollToTopBtn.onclick = () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+    function scrollToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
   </script>
 </body>
 </html>

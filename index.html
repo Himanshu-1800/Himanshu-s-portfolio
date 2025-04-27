@@ -1,201 +1,100 @@
-/* Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Himanshu Paradkar's GitHub Webpage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      Himanshu Paradkar
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  background: #f0f4f8;
-  position: relative;
-  min-height: 100vh;
-}
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to My Portfolio <span>Webpage</span></h1>
+    <p>Explore my projects, skills, and more!</p>
+  </section>
 
-header {
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+  <!-- About Section -->
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p>Hi, I'm Himanshu Paradkar, a passionate software developer and technology enthusiast. I specialize in cloud computing, containerization, and web development.</p>
+  </section>
 
-.logo {
-  font-weight: bold;
-  font-size: 1.8rem;
-  color: #0284c7;
-}
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <h2>My Projects</h2>
+    <p>Here are some of my awesome projects that I have worked on:</p>
+    <div class="project-cards">
+      <div class="card">
+        <h3>Project 1</h3>
+        <p>Description of the project goes here.</p>
+      </div>
+      <div class="card">
+        <h3>Project 2</h3>
+        <p>Description of the project goes here.</p>
+      </div>
+      <div class="card">
+        <h3>Project 3</h3>
+        <p>Description of the project goes here.</p>
+      </div>
+    </div>
+  </section>
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to connect, feel free to reach out!</p>
+    <div class="contact-icons">
+      <a href="https://github.com/Himanshu-1800" target="_blank"><img src="github-logo.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/himanshu-paradkar" target="_blank"><img src="linkedin-logo.png" alt="LinkedIn"></a>
+    </div>
+  </section>
 
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-size: 1rem;
-  transition: color 0.3s;
-}
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn">↑</button>
 
-nav a:hover {
-  color: #0284c7;
-}
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Himanshu Paradkar. All rights reserved.</p>
+  </footer>
 
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
-}
+  <!-- Bubbles Animation -->
+  <div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
+  <script>
+    // Scroll to top button functionality
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-.hero h1 span {
-  color: #0284c7;
-}
+    window.onscroll = () => {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    };
 
-.hero p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-.section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.section p {
-  max-width: 600px;
-  margin: 0 auto 40px;
-  color: #666;
-}
-
-.tech-icons, .contact-icons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.tech-icons img, .contact-icons img {
-  width: 50px;
-  height: 50px;
-  transition: transform 0.3s;
-}
-
-.tech-icons img:hover, .contact-icons img:hover {
-  transform: scale(1.2);
-}
-
-.project-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
-  padding: 0 20px;
-}
-
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #ffffff;
-  font-size: 0.9rem;
-  color: #777;
-  margin-top: 40px;
-}
-
-/* Floating Bubbles */
-.bubbles {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-}
-
-.bubble {
-  position: absolute;
-  bottom: -100px;
-  width: 40px;
-  height: 40px;
-  background: rgba(14, 165, 233, 0.3);
-  border-radius: 50%;
-  animation: rise 25s infinite ease-in;
-}
-
-.bubble:nth-child(1) { left: 10%; width: 60px; height: 60px; animation-duration: 20s; }
-.bubble:nth-child(2) { left: 30%; animation-duration: 25s; }
-.bubble:nth-child(3) { left: 50%; width: 80px; height: 80px; animation-duration: 30s; }
-.bubble:nth-child(4) { left: 70%; animation-duration: 22s; }
-.bubble:nth-child(5) { left: 90%; width: 50px; height: 50px; animation-duration: 27s; }
-
-@keyframes rise {
-  0% { transform: translateY(0) scale(1); opacity: 0.4; }
-  50% { opacity: 0.7; }
-  100% { transform: translateY(-1200px) scale(1.5); opacity: 0; }
-}
-
-/* Scroll to Top Button */
-#scrollToTopBtn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 100;
-  display: none;
-  font-size: 18px;
-  padding: 12px 16px;
-  border: none;
-  background-color: #0284c7;
-  color: white;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  transition: background 0.3s;
-}
-
-#scrollToTopBtn:hover {
-  background-color: #0369a1;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-}
+    scrollToTopBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+</body>
+</html>

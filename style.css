@@ -52,7 +52,7 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 100px 20px;
-  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+  background: linear-gradient(to bottom, #2d7cc3, #f1f5f8);
 }
 
 .hero h1 {
@@ -83,6 +83,20 @@ nav a:hover {
   max-width: 600px;
   margin: 0 auto 40px;
   color: #666;
+}
+
+.about-content {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
 }
 
 .tech-icons, .contact-icons {
@@ -121,6 +135,33 @@ nav a:hover {
 
 .card:hover {
   transform: translateY(-10px);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #777;
+}
+
+.card .btn {
+  background-color: #0284c7;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card .btn:hover {
+  background-color: #0369a1;
 }
 
 footer {

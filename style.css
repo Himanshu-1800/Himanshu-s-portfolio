@@ -97,6 +97,7 @@ nav a:hover {
   width: 50px;
   height: 50px;
   transition: transform 0.3s;
+  border-radius: 10px;
 }
 
 .tech-icons img:hover, .contact-icons img:hover {
@@ -181,21 +182,3 @@ footer {
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0,0,0,0.3);
   transition: background 0.3s;
-}
-
-#scrollToTopBtn:hover {
-  background-color: #0369a1;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-}
